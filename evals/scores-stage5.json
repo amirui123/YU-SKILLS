@@ -1,0 +1,38 @@
+{
+  "stage": 5,
+  "stage_name": "نقد (Critique)",
+  "final_score": 100.0,
+  "passed": true,
+  "hard_reject_active": false,
+  "metric_below_90": false,
+  "criteria": [
+    {
+      "id": "three_reviews",
+      "title": "سه بررسی (منتقد، ابطال، سناریو زنده)",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": false
+    },
+    {
+      "id": "bug_discovery",
+      "title": "کشف و مستندسازی باگ‌ها",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": false
+    },
+    {
+      "id": "failure_modes_doc",
+      "title": "حالت‌های شکست مستند (R1–R7)",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": false
+    },
+    {
+      "id": "anti_bug_fixes",
+      "title": "رفع ضدباگ بدون تخریب سایر بخش‌ها",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": true
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "stage": 1,
+  "stage_name": "تحقیق (Research)",
+  "final_score": 99.6,
+  "passed": true,
+  "hard_reject_active": false,
+  "metric_below_90": false,
+  "criteria": [
+    {
+      "id": "storm",
+      "title": "چشم‌اندازهای STORM",
+      "weight": 20,
+      "score": 100,
+      "hard_reject": false
+    },
+    {
+      "id": "parallel_paths",
+      "title": "۵ مسیر موازی",
+      "weight": 20,
+      "score": 100,
+      "hard_reject": false
+    },
+    {
+      "id": "bilingual",
+      "title": "جست‌وجوی دوزبانه FA+EN",
+      "weight": 20,
+      "score": 100,
+      "hard_reject": false
+    },
+    {
+      "id": "saturation",
+      "title": "اشباع ۵ شرطی",
+      "weight": 20,
+      "score": 98,
+      "hard_reject": false
+    },
+    {
+      "id": "live_sources",
+      "title": "منابع زنده تست‌شده",
+      "weight": 20,
+      "score": 100,
+      "hard_reject": false
+    }
+  ]
+}

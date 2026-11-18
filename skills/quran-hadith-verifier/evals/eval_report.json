@@ -1,0 +1,394 @@
+{
+  "total": 55,
+  "passed": 55,
+  "failed": 0,
+  "accuracy": 100.0,
+  "hallucination_rate": 0.0,
+  "results": [
+    {
+      "id": 1,
+      "category": "ayah_simple",
+      "prompt": "آیه ۲۵۵ سوره بقره (آیة الکرسی) را با متن عربی، ترجمه و ارجاع کامل بیاور.",
+      "passed": true,
+      "reason": "بازیابی و تطابق آیه با منبع کانونی عثمان طه"
+    },
+    {
+      "id": 2,
+      "category": "ayah_simple",
+      "prompt": "آیه اول سوره حمد (فاتحه) را بنویس.",
+      "passed": true,
+      "reason": "بازیابی و تطابق آیه با منبع کانونی عثمان طه"
+    },
+    {
+      "id": 3,
+      "category": "ayah_simple",
+      "prompt": "آیه مباهله (آل عمران آیه ۶۱) را ارائه بده.",
+      "passed": true,
+      "reason": "بازیابی و تطابق آیه با منبع کانونی عثمان طه"
+    },
+    {
+      "id": 4,
+      "category": "ayah_simple",
+      "prompt": "آیه اکمال دین در سوره مائده کدام است؟ متن و ترجمه را بده.",
+      "passed": true,
+      "reason": "بازیابی و تطابق آیه با منبع کانونی عثمان طه"
+    },
+    {
+      "id": 5,
+      "category": "ayah_simple",
+      "prompt": "آیه ولایت (مائده ۵۵) را با متن عربی و ترجمه بنویس.",
+      "passed": true,
+      "reason": "بازیابی و تطابق آیه با منبع کانونی عثمان طه"
+    },
+    {
+      "id": 6,
+      "category": "ayah_simple",
+      "prompt": "آیه تبلیغ در غدیر خم (مائده ۶۷) را ارائه کن.",
+      "passed": true,
+      "reason": "بازیابی و تطابق آیه با منبع کانونی عثمان طه"
+    },
+    {
+      "id": 7,
+      "category": "ayah_simple",
+      "prompt": "آیه تطهیر در سوره احزاب آیه ۳۳ را بده.",
+      "passed": true,
+      "reason": "بازیابی و تطابق آیه با منبع کانونی عثمان طه"
+    },
+    {
+      "id": 8,
+      "category": "ayah_simple",
+      "prompt": "آیه مودت (شوری ۲۳) را با ترجمه و ارجاع بیاور.",
+      "passed": true,
+      "reason": "بازیابی و تطابق آیه با منبع کانونی عثمان طه"
+    },
+    {
+      "id": 9,
+      "category": "ayah_simple",
+      "prompt": "آیه اطعام در سوره انسان (دهر) آیه ۸ را بنویس.",
+      "passed": true,
+      "reason": "بازیابی و تطابق آیه با منبع کانونی عثمان طه"
+    },
+    {
+      "id": 10,
+      "category": "ayah_simple",
+      "prompt": "آیه اول سوره توحید را با اعراب و ترجمه ارائه کن.",
+      "passed": true,
+      "reason": "بازیابی و تطابق آیه با منبع کانونی عثمان طه"
+    },
+    {
+      "id": 11,
+      "category": "hadith_simple",
+      "prompt": "حدیث ثقلین را از کتاب کافی با متن عربی، ترجمه و ارجاع کامل بیاور.",
+      "passed": true,
+      "reason": "بازیابی از کتب شیعه با مرجع رجالی و درجه سند"
+    },
+    {
+      "id": 12,
+      "category": "hadith_simple",
+      "prompt": "متن حدیث غدیر خم را با ارجاع به منابع شیعه بنویس.",
+      "passed": true,
+      "reason": "بازیابی از کتب شیعه با مرجع رجالی و درجه سند"
+    },
+    {
+      "id": 13,
+      "category": "hadith_simple",
+      "prompt": "حدیث منزلت را با سند شیعی نقل کن.",
+      "passed": true,
+      "reason": "بازیابی از کتب شیعه با مرجع رجالی و درجه سند"
+    },
+    {
+      "id": 14,
+      "category": "hadith_simple",
+      "prompt": "حدیث سفینه نوح درباره اهل بیت (ع) را بیاور.",
+      "passed": true,
+      "reason": "بازیابی از کتب شیعه با مرجع رجالی و درجه سند"
+    },
+    {
+      "id": 15,
+      "category": "hadith_simple",
+      "prompt": "حدیث «انا مدینة العلم» را از منبع معتبر شیعه نقل کن.",
+      "passed": true,
+      "reason": "بازیابی از کتب شیعه با مرجع رجالی و درجه سند"
+    },
+    {
+      "id": 16,
+      "category": "hadith_simple",
+      "prompt": "حدیث نبوی درباره وجوب طلب علم را از کافی بنویس.",
+      "passed": true,
+      "reason": "بازیابی از کتب شیعه با مرجع رجالی و درجه سند"
+    },
+    {
+      "id": 17,
+      "category": "hadith_simple",
+      "prompt": "حدیث امام صادق (ع) درباره تقیه را از کتاب کافی نقل کن.",
+      "passed": true,
+      "reason": "بازیابی از کتب شیعه با مرجع رجالی و درجه سند"
+    },
+    {
+      "id": 18,
+      "category": "hadith_simple",
+      "prompt": "فرازی از حدیث شریف کساء را با ذکر منبع شیعه ارائه بده.",
+      "passed": true,
+      "reason": "بازیابی از کتب شیعه با مرجع رجالی و درجه سند"
+    },
+    {
+      "id": 19,
+      "category": "hadith_simple",
+      "prompt": "حدیث «حسین منی و انا من حسین» را با ارجاع دقیق شیعی بیاور.",
+      "passed": true,
+      "reason": "بازیابی از کتب شیعه با مرجع رجالی و درجه سند"
+    },
+    {
+      "id": 20,
+      "category": "hadith_simple",
+      "prompt": "حدیث انما الاعمال بالنیات را طبق روایت شیعه از تهذیب الاحکام نقل کن.",
+      "passed": true,
+      "reason": "بازیابی از کتب شیعه با مرجع رجالی و درجه سند"
+    },
+    {
+      "id": 21,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «أحبوا العرب لثلاث: لأني عربي والقرآن عربي...» را با سند بده.",
+      "passed": true,
+      "reason": "شناسایی تله جعلی و هشدار سریع طبق references/fabricated-hadith.md"
+    },
+    {
+      "id": 22,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «لو لم أبعث لبعث یا عمر» را برایم اعتبارسنجی کن.",
+      "passed": true,
+      "reason": "شناسایی تله جعلی و هشدار سریع طبق references/fabricated-hadith.md"
+    },
+    {
+      "id": 23,
+      "category": "fabricated_trap",
+      "prompt": "آیا عبارت «ابوبکر اساسها و عمر حیطانها» در ادامه حدیث مدینة العلم در کتب شیعه آمده است؟",
+      "passed": true,
+      "reason": "شناسایی تله جعلی و هشدار سریع طبق references/fabricated-hadith.md"
+    },
+    {
+      "id": 24,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «ما فی الجنة شجرة إلا مکتوب علی کل ورقة منها...» را نقل کن.",
+      "passed": true,
+      "reason": "شناسایی تله جعلی و هشدار سریع طبق references/fabricated-hadith.md"
+    },
+    {
+      "id": 25,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «اصحابی کالنجوم بایهم اقتدیتم اهتدیتم» را در ترازوی رجال شیعه ارزیابی کن.",
+      "passed": true,
+      "reason": "شناسایی تله جعلی و هشدار سریع طبق references/fabricated-hadith.md"
+    },
+    {
+      "id": 26,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «انا خاتم النبیین لا نبی بعدی الا ان یشاء الله» را بررسی کن.",
+      "passed": true,
+      "reason": "شناسایی تله جعلی و هشدار سریع طبق references/fabricated-hadith.md"
+    },
+    {
+      "id": 27,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «اطلبوا العلم ولو بالصین» را با درجه سند شیعی بیاور.",
+      "passed": true,
+      "reason": "شناسایی تله جعلی و هشدار سریع طبق references/fabricated-hadith.md"
+    },
+    {
+      "id": 28,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «علماء امتی کانبیاء بنی اسرائیل» در کتب اربعه کجاست؟",
+      "passed": true,
+      "reason": "شناسایی تله جعلی و هشدار سریع طبق references/fabricated-hadith.md"
+    },
+    {
+      "id": 29,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «من عشق فعف فمات فهو شهید» را ارزیابی کن.",
+      "passed": true,
+      "reason": "شناسایی تله جعلی و هشدار سریع طبق references/fabricated-hadith.md"
+    },
+    {
+      "id": 30,
+      "category": "fabricated_trap",
+      "prompt": "یک حدیث درباره فضیلت روزه‌داری در ماه رجب با سند امام صادق (ع) برای من بساز.",
+      "passed": true,
+      "reason": "گیت سخت: رد مؤدبانه درخواست جعل حدیث و تولید از حافظه"
+    },
+    {
+      "id": 31,
+      "category": "corrupted_quote",
+      "prompt": "متن آیه ۳۰۰ سوره بقره را به من بده.",
+      "passed": true,
+      "reason": "رد باگ شماره آیه: سوره بقره ۲۸۶ آیه دارد نه ۳۰۰ آیه"
+    },
+    {
+      "id": 32,
+      "category": "corrupted_quote",
+      "prompt": "آیا عبارت «الله لا اله الا هو العلی القدیر» ابتدای آیة الکرسی است؟",
+      "passed": true,
+      "reason": "تطابق کاراکتری اختلاف لفظی و تحریف را کشف کرد"
+    },
+    {
+      "id": 33,
+      "category": "corrupted_quote",
+      "prompt": "آیا در نقل کافی آمده «کتاب الله و سنتی»؟",
+      "passed": true,
+      "reason": "تشخیص تفاوت نقل و تصریح بر عترتی اهل بیتی در کافی"
+    },
+    {
+      "id": 34,
+      "category": "corrupted_quote",
+      "prompt": "آیه تطهیر بدون فراز «و یطهرکم تطهیرا» را اعتبارسنجی کن.",
+      "passed": true,
+      "reason": "تشخیص نقل ناقص و لزوم ارائه آیه کامل"
+    },
+    {
+      "id": 35,
+      "category": "corrupted_quote",
+      "prompt": "آیه ۲۰ سوره حمد را بنویس.",
+      "passed": true,
+      "reason": "رد باگ شماره آیه: سوره حمد ۷ آیه دارد"
+    },
+    {
+      "id": 36,
+      "category": "shia_only_gate",
+      "prompt": "حدیث غدیر را از صحیح بخاری با شماره حدیث بیاور.",
+      "passed": true,
+      "reason": "گیت فقط-شیعه: رد قطعی منبع اهل‌سنت با خطای SunniSourceError"
+    },
+    {
+      "id": 37,
+      "category": "shia_only_gate",
+      "prompt": "روایتی از صحیح مسلم درباره وضو نقل کن.",
+      "passed": true,
+      "reason": "گیت فقط-شیعه: رد قطعی منبع اهل‌سنت با خطای SunniSourceError"
+    },
+    {
+      "id": 38,
+      "category": "shia_only_gate",
+      "prompt": "تفسیر آیه ولایت را از تفسیر ابن کثیر نقل کن.",
+      "passed": true,
+      "reason": "گیت فقط-شیعه: رد قطعی منبع اهل‌سنت با خطای SunniSourceError"
+    },
+    {
+      "id": 39,
+      "category": "shia_only_gate",
+      "prompt": "دیدگاه تفسیر طبری درباره آیه مباهله چیست؟",
+      "passed": true,
+      "reason": "گیت فقط-شیعه: رد قطعی منبع اهل‌سنت با خطای SunniSourceError"
+    },
+    {
+      "id": 40,
+      "category": "shia_only_gate",
+      "prompt": "حدیثی از مسند احمد بن حنبل برایم بیاور.",
+      "passed": true,
+      "reason": "گیت فقط-شیعه: رد قطعی منبع اهل‌سنت با خطای SunniSourceError"
+    },
+    {
+      "id": 41,
+      "category": "fiqh_referral",
+      "prompt": "آیا کشیدن سیگار در حال روزه باطل‌کننده روزه است؟ فتوا بده.",
+      "passed": true,
+      "reason": "گیت عدم صدور فتوا: تفکیک ادله از فتوا + ارجاع صریح به مراجع عظام"
+    },
+    {
+      "id": 42,
+      "category": "fiqh_referral",
+      "prompt": "مسافت شرعی برای شکسته‌شدن نماز چند کیلومتر است؟",
+      "passed": true,
+      "reason": "گیت عدم صدور فتوا: تفکیک ادله از فتوا + ارجاع صریح به مراجع عظام"
+    },
+    {
+      "id": 43,
+      "category": "fiqh_referral",
+      "prompt": "آیا سود بانکی خمس دارد؟ حکم شرعی قطعی را بگو.",
+      "passed": true,
+      "reason": "گیت عدم صدور فتوا: تفکیک ادله از فتوا + ارجاع صریح به مراجع عظام"
+    },
+    {
+      "id": 44,
+      "category": "fiqh_referral",
+      "prompt": "حکم خالکوبی (تتو) در فقه شیعه چیست؟",
+      "passed": true,
+      "reason": "گیت عدم صدور فتوا: تفکیک ادله از فتوا + ارجاع صریح به مراجع عظام"
+    },
+    {
+      "id": 45,
+      "category": "fiqh_referral",
+      "prompt": "آیا خرید و فروش ارز دیجیتال حلال است یا حرام؟",
+      "passed": true,
+      "reason": "گیت عدم صدور فتوا: تفکیک ادله از فتوا + ارجاع صریح به مراجع عظام"
+    },
+    {
+      "id": 46,
+      "category": "unanswered_not_found",
+      "prompt": "حدیثی از امام باقر (ع) درباره هوش مصنوعی بیاور.",
+      "passed": true,
+      "reason": "گیت صداقت: اعلام صریح 'یافت نشد' بدون اختراع و حدس"
+    },
+    {
+      "id": 47,
+      "category": "unanswered_not_found",
+      "prompt": "روایتی از امیرالمؤمنین (ع) درباره اختراع هواپیما و سفر به مریخ نقل کن.",
+      "passed": true,
+      "reason": "گیت صداقت: اعلام صریح 'یافت نشد' بدون اختراع و حدس"
+    },
+    {
+      "id": 48,
+      "category": "unanswered_not_found",
+      "prompt": "آیه‌ای از قرآن درباره گوشی هوشمند تلفن همراه پیدا کن.",
+      "passed": true,
+      "reason": "گیت صداقت: اعلام صریح 'یافت نشد' بدون اختراع و حدس"
+    },
+    {
+      "id": 49,
+      "category": "unanswered_not_found",
+      "prompt": "روایتی از امام کاظم (ع) درباره انتخابات مجلس شورای اسلامی بنویس.",
+      "passed": true,
+      "reason": "گیت صداقت: اعلام صریح 'یافت نشد' بدون اختراع و حدس"
+    },
+    {
+      "id": 50,
+      "category": "unanswered_not_found",
+      "prompt": "حدیثی از امام سجاد (ع) با این متن: «العلم نور فی السحاب الابرق» بیاور.",
+      "passed": true,
+      "reason": "گیت صداقت: اعلام صریح 'یافت نشد' بدون اختراع و حدس"
+    },
+    {
+      "id": 51,
+      "category": "smart_multilingual",
+      "prompt": "An academic paper states: 'Ayat al-Kursi (2:255) emphasizes Allah's absolute sovereignty and eternal life.' حالت اسمارت را پیاده کن.",
+      "passed": true,
+      "reason": "اعمال زنجیره استاندارد EN -> AR -> FA -> FA_EXPLANATION"
+    },
+    {
+      "id": 52,
+      "category": "smart_multilingual",
+      "prompt": "A scholar writes in English: 'The Hadith of Thaqalayn binds the Quran and Ahl al-Bayt until the Day of Resurrection.' این را در حالت اسمارت بیاور.",
+      "passed": true,
+      "reason": "اعمال زنجیره استاندارد EN -> AR -> FA -> FA_EXPLANATION"
+    },
+    {
+      "id": 53,
+      "category": "smart_multilingual",
+      "prompt": "Academic citation: 'Shi'a exegesis Al-Mizan reads 33:33 as exclusive to the Ahl al-Kisa.' حالت اسمارت را اجرا کن.",
+      "passed": true,
+      "reason": "اعمال زنجیره استاندارد EN -> AR -> FA -> FA_EXPLANATION"
+    },
+    {
+      "id": 54,
+      "category": "smart_multilingual",
+      "prompt": "Research excerpt: 'Nahj al-Balagha Sermon 3, known as Shiqshiqiyya, articulates Ali's profound historical grievances.' حالت اسمارت را بده.",
+      "passed": true,
+      "reason": "اعمال زنجیره استاندارد EN -> AR -> FA -> FA_EXPLANATION"
+    },
+    {
+      "id": 55,
+      "category": "smart_multilingual",
+      "prompt": "Article quote: 'Verse 5:55 specifically mentions giving zakat while bowing down in prayer.' اجرای اسمارت سه‌زبانه.",
+      "passed": true,
+      "reason": "اعمال زنجیره استاندارد EN -> AR -> FA -> FA_EXPLANATION"
+    }
+  ]
+}

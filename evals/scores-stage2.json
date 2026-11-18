@@ -1,0 +1,38 @@
+{
+  "stage": 2,
+  "stage_name": "طراحی (Design)",
+  "final_score": 99.5,
+  "passed": true,
+  "hard_reject_active": false,
+  "metric_below_90": false,
+  "criteria": [
+    {
+      "id": "architecture",
+      "title": "معماری واضح و ماژولار",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": true
+    },
+    {
+      "id": "hard_gates",
+      "title": "قوانین سخت ضدباگ (B1–B15)",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": true
+    },
+    {
+      "id": "source_registry",
+      "title": "ثبت منابع (فقط شیعه)",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": true
+    },
+    {
+      "id": "failure_modes",
+      "title": "حالت‌های شکست مستند",
+      "weight": 25,
+      "score": 98,
+      "hard_reject": false
+    }
+  ]
+}

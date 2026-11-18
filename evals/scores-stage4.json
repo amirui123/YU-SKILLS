@@ -1,0 +1,38 @@
+{
+  "stage": 4,
+  "stage_name": "بهینه‌سازی (Optimization)",
+  "final_score": 99.5,
+  "passed": true,
+  "hard_reject_active": false,
+  "metric_below_90": false,
+  "criteria": [
+    {
+      "id": "persian_triggers",
+      "title": "تریگرهای فارسی در ابتدا",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": false
+    },
+    {
+      "id": "do_not_use",
+      "title": "مرزهای شفاف Do NOT use",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": true
+    },
+    {
+      "id": "length_budget",
+      "title": "طول توضیحات در محدوده استاندارد",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": false
+    },
+    {
+      "id": "domain_coverage",
+      "title": "پوشش دامنه و حوزه‌های فقهی/تفسیر",
+      "weight": 25,
+      "score": 98,
+      "hard_reject": false
+    }
+  ]
+}
