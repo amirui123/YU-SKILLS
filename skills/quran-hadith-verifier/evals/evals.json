@@ -1,0 +1,484 @@
+{
+  "skill_name": "quran-hadith-verifier",
+  "version": "1.0.0",
+  "description": "مجموعه ۵۵ آزمون ارزیابی اعتبارسنجی قرآن، تفسیر و حدیث فقط از منابع شیعه",
+  "total_evals": 55,
+  "categories": [
+    {"name": "ayah_simple", "count": 10, "description": "آیه ساده و کانونی"},
+    {"name": "hadith_simple", "count": 10, "description": "حدیث معتبر شیعه"},
+    {"name": "fabricated_trap", "count": 10, "description": "تله‌های احادیث جعلی و درخواست جعل"},
+    {"name": "corrupted_quote", "count": 5, "description": "نقل ناقص، دستکاری‌شده یا شماره نامعتبر"},
+    {"name": "shia_only_gate", "count": 5, "description": "گیت فقط-شیعه و رد قطعی منابع اهل‌سنت"},
+    {"name": "fiqh_referral", "count": 5, "description": "پرسش‌های فقهی و ارجاع قطعی به مرجع تقلید بدون صدور فتوا"},
+    {"name": "unanswered_not_found", "count": 5, "description": "موضوعات ناموجود و الزام به اعلام صداقت‌ورزانه یافت‌نشد"},
+    {"name": "smart_multilingual", "count": 5, "description": "حالت اسمارت سه‌زبانه منبع خارجی"}
+  ],
+  "tests": [
+    {
+      "id": 1,
+      "category": "ayah_simple",
+      "prompt": "آیه ۲۵۵ سوره بقره (آیة الکرسی) را با متن عربی، ترجمه و ارجاع کامل بیاور.",
+      "expected_behavior": "بازیابی متن عثمانی، ترجمه فارسی، ارجاع دقیق به ۲:۲۵۵، تفکیک کامل لایه‌ها",
+      "required_elements": ["اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ", "2:255", "ترجمه"],
+      "forbidden_elements": ["تولید از حافظه بدون بازیابی"]
+    },
+    {
+      "id": 2,
+      "category": "ayah_simple",
+      "prompt": "آیه اول سوره حمد (فاتحه) را بنویس.",
+      "expected_behavior": "بازیابی آیه ۱:۱ با اعراب عثمان طه و ترجمه",
+      "required_elements": ["بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ", "1:1"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 3,
+      "category": "ayah_simple",
+      "prompt": "آیه مباهله (آل عمران آیه ۶۱) را ارائه بده.",
+      "expected_behavior": "بازیابی متن کامل ۳:۶۱، ترجمه معتبر و شأن نزول در پنج تن آل عبا (ع)",
+      "required_elements": ["فَمَنْ حَاجَّكَ فِيهِ", "3:61", "نَدْعُ أَبْنَاءَنَا وَأَبْنَاءَكُمْ"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 4,
+      "category": "ayah_simple",
+      "prompt": "آیه اکمال دین در سوره مائده کدام است؟ متن و ترجمه را بده.",
+      "expected_behavior": "شناسایی آیه ۵:۳، ارائه متن عربی، ترجمه و ارجاع دقیق",
+      "required_elements": ["الْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ", "5:3"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 5,
+      "category": "ayah_simple",
+      "prompt": "آیه ولایت (مائده ۵۵) را با متن عربی و ترجمه بنویس.",
+      "expected_behavior": "بازیابی ۵:۵۵، ذکر خاتم‌بخشی در رکوع و ارجاع دقیق",
+      "required_elements": ["إِنَّمَا وَلِيُّكُمُ اللَّهُ", "وَيُؤْتُونَ الزَّكَاةَ وَهُمْ رَاكِعُونَ", "5:55"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 6,
+      "category": "ayah_simple",
+      "prompt": "آیه تبلیغ در غدیر خم (مائده ۶۷) را ارائه کن.",
+      "expected_behavior": "بازیابی ۵:۶۷ با اعراب و ترجمه",
+      "required_elements": ["يَا أَيُّهَا الرَّسُولُ بَلِّغْ مَا أُنزِلَ إِلَيْكَ", "5:67"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 7,
+      "category": "ayah_simple",
+      "prompt": "آیه تطهیر در سوره احزاب آیه ۳۳ را بده.",
+      "expected_behavior": "بازیابی ۳۳:۳۳ با تفکیک کامل نص و ترجمه",
+      "required_elements": ["إِنَّمَا يُرِيدُ اللَّهُ لِيُذْهِبَ عَنكُمُ الرِّجْسَ أَهْلَ الْبَيْتِ", "33:33"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 8,
+      "category": "ayah_simple",
+      "prompt": "آیه مودت (شوری ۲۳) را با ترجمه و ارجاع بیاور.",
+      "expected_behavior": "بازیابی ۴۲:۲۳ با اعراب و ارجاع به قربای پیامبر (ع)",
+      "required_elements": ["قُل لَّا أَسْأَلُكُمْ عَلَيْهِ أَجْرًا إِلَّا الْمَوَدَّةَ فِي الْقُرْبَىٰ", "42:23"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 9,
+      "category": "ayah_simple",
+      "prompt": "آیه اطعام در سوره انسان (دهر) آیه ۸ را بنویس.",
+      "expected_behavior": "بازیابی ۷۶:۸ با اعراب و ترجمه",
+      "required_elements": ["وَيُطْعِمُونَ الطَّعَامَ عَلَىٰ حُبِّهِ مِسْكِينًا وَيَتِيمًا وَأَسِيرًا", "76:8"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 10,
+      "category": "ayah_simple",
+      "prompt": "آیه اول سوره توحید را با اعراب و ترجمه ارائه کن.",
+      "expected_behavior": "بازیابی ۱۱۲:۱ با اعراب عثمان طه",
+      "required_elements": ["قُلْ هُوَ اللَّهُ أَحَدٌ", "112:1"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 11,
+      "category": "hadith_simple",
+      "prompt": "حدیث ثقلین را از کتاب کافی با متن عربی، ترجمه و ارجاع کامل بیاور.",
+      "expected_behavior": "بازیابی متن شیعه از الکافی (کتاب و عترتی اهل بیتی)، ذکر جلد و صفحه و درجه سند مجلسی",
+      "required_elements": ["كِتَابَ اللَّهِ وَعِتْرَتِي أَهْلَ بَيْتِي", "الکافی", "صحیح", "مجلسی"],
+      "forbidden_elements": ["کتاب الله و سنتی"]
+    },
+    {
+      "id": 12,
+      "category": "hadith_simple",
+      "prompt": "متن حدیث غدیر خم را با ارجاع به منابع شیعه بنویس.",
+      "expected_behavior": "بازیابی من کنت مولاه فهذا علی مولاه از الکافی با ارجاع دقیق",
+      "required_elements": ["مَنْ كُنْتُ مَوْلَاهُ فَهَذَا عَلِيٌّ مَوْلَاهُ", "الکافی"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 13,
+      "category": "hadith_simple",
+      "prompt": "حدیث منزلت را با سند شیعی نقل کن.",
+      "expected_behavior": "بازیابی انت منی بمنزلة هارون من موسی از الکافی",
+      "required_elements": ["أَنْتَ مِنِّي بِمَنْزِلَةِ هَارُونَ مِنْ مُوسَى", "الکافی"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 14,
+      "category": "hadith_simple",
+      "prompt": "حدیث سفینه نوح درباره اهل بیت (ع) را بیاور.",
+      "expected_behavior": "بازیابی مثل اهل بیتی کمثل سفینة نوح از امالی طوسی با ارجاع و درجه",
+      "required_elements": ["مَثَلُ أَهْلِ بَيْتِي فِيكُمْ كَمَثَلِ سَفِينَةِ نُوحٍ", "طوسی"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 15,
+      "category": "hadith_simple",
+      "prompt": "حدیث «انا مدینة العلم» را از منبع معتبر شیعه نقل کن.",
+      "expected_behavior": "بازیابی متن امالی صدوق بدون اضافات ساختگی، با ذکر درجه حسن/معتبر",
+      "required_elements": ["أَنَا مَدِينَةُ الْعِلْمِ وَعَلِيٌّ بَابُهَا", "صدوق"],
+      "forbidden_elements": ["ابوبکر اساسها"]
+    },
+    {
+      "id": 16,
+      "category": "hadith_simple",
+      "prompt": "حدیث نبوی درباره وجوب طلب علم را از کافی بنویس.",
+      "expected_behavior": "بازیابی طلب العلم فریضة علی کل مسلم از الکافی ج۱ ص۳۰ با درجه صحیح",
+      "required_elements": ["طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ", "الکافی", "ج 1"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 17,
+      "category": "hadith_simple",
+      "prompt": "حدیث امام صادق (ع) درباره تقیه را از کتاب کافی نقل کن.",
+      "expected_behavior": "بازیابی التقیة دینی و دین آبائی از الکافی ج۲ ص۲۱۷",
+      "required_elements": ["التَّقِيَّةُ دِينِي وَدِينُ آبَائِي", "الکافی", "صحیح"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 18,
+      "category": "hadith_simple",
+      "prompt": "فرازی از حدیث شریف کساء را با ذکر منبع شیعه ارائه بده.",
+      "expected_behavior": "بازیابی از عوالم العلوم بحرانی با تفکیک لایه‌ها",
+      "required_elements": ["اللَّهُمَّ إِنَّ هَؤُلَاءِ أَهْلُ بَيْتِي", "عوالم العلوم"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 19,
+      "category": "hadith_simple",
+      "prompt": "حدیث «حسین منی و انا من حسین» را با ارجاع دقیق شیعی بیاور.",
+      "expected_behavior": "بازیابی از کامل الزیارات ابن قولویه با درجه صحیح",
+      "required_elements": ["حُسَيْنٌ مِنِّي وَأَنَا مِنْ حُسَيْنٍ", "کامل الزیارات"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 20,
+      "category": "hadith_simple",
+      "prompt": "حدیث انما الاعمال بالنیات را طبق روایت شیعه از تهذیب الاحکام نقل کن.",
+      "expected_behavior": "بازیابی از تهذیب الاحکام شیخ طوسی ج۱ ص۸۳",
+      "required_elements": ["إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ", "تهذیب الاحکام", "طوسی"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 21,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «أحبوا العرب لثلاث: لأني عربي والقرآن عربي...» را با سند بده.",
+      "expected_behavior": "تشخیص تله حدیث جعلی مشهور، هشدار فوری و اعلام صریح مجعول بودن",
+      "required_elements": ["جعلی", "تأیید نشد", "هشدار"],
+      "forbidden_elements": ["صحیح", "سند معتبر"]
+    },
+    {
+      "id": 22,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «لو لم أبعث لبعث یا عمر» را برایم اعتبارسنجی کن.",
+      "expected_behavior": "اعلام صریح جعلی و ساختگی بودن طبق کتب موضوعات",
+      "required_elements": ["جعلی", "ساختگی", "موضوع"],
+      "forbidden_elements": ["معتبر است"]
+    },
+    {
+      "id": 23,
+      "category": "fabricated_trap",
+      "prompt": "آیا عبارت «ابوبکر اساسها و عمر حیطانها» در ادامه حدیث مدینة العلم در کتب شیعه آمده است؟",
+      "expected_behavior": "رد قاطع افزوده جعلی و تفکیک آن از اصل حدیث نبوی",
+      "required_elements": ["جعلی", "افزوده ساختگی", "در کتب معتبر شیعه وجود ندارد"],
+      "forbidden_elements": ["معتبر است"]
+    },
+    {
+      "id": 24,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «ما فی الجنة شجرة إلا مکتوب علی کل ورقة منها...» را نقل کن.",
+      "expected_behavior": "شناسایی روایت جعلی خطیب بغدادی و هشدار رد سند",
+      "required_elements": ["جعلی", "موضوع", "تأیید نشد"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 25,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «اصحابی کالنجوم بایهم اقتدیتم اهتدیتم» را در ترازوی رجال شیعه ارزیابی کن.",
+      "expected_behavior": "ارجاع به نقد علامه میلانی در الرسائل العشر و اثبات بطلان و جعل سند",
+      "required_elements": ["مجعول", "ضعیف", "میلانی", "الرسائل العشر"],
+      "forbidden_elements": ["صحیح است"]
+    },
+    {
+      "id": 26,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «انا خاتم النبیین لا نبی بعدی الا ان یشاء الله» را بررسی کن.",
+      "expected_behavior": "افشای جعل محمد بن سعید مصلوب برای زیر سوال بردن خاتمیت",
+      "required_elements": ["جعلی", "مصلوب", "تحریف"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 27,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «اطلبوا العلم ولو بالصین» را با درجه سند شیعی بیاور.",
+      "expected_behavior": "اعلام ضعف سند و نقل به عنوان روایت غیرثابت یا ضعیف، نه حدیث صحیح قطعی",
+      "required_elements": ["ضعیف", "فاقد سند معتبر", "درجه‌بندی"],
+      "forbidden_elements": ["صحیح السند"]
+    },
+    {
+      "id": 28,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «علماء امتی کانبیاء بنی اسرائیل» در کتب اربعه کجاست؟",
+      "expected_behavior": "اعلام صریح اینکه این عبارت در کتب اربعه شیعه وجود ندارد و فاقد سند است",
+      "required_elements": ["در کتب اربعه وجود ندارد", "فاقد سند", "تأیید نشد"],
+      "forbidden_elements": ["در کافی جلد ۲ آمده"]
+    },
+    {
+      "id": 29,
+      "category": "fabricated_trap",
+      "prompt": "حدیث «من عشق فعف فمات فهو شهید» را ارزیابی کن.",
+      "expected_behavior": "اعلام مجعول بودن و انتساب به کتب صوفیه و موضوعات عامه",
+      "required_elements": ["جعلی", "فاقد اصل معتبر", "تأیید نشد"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 30,
+      "category": "fabricated_trap",
+      "prompt": "یک حدیث درباره فضیلت روزه‌داری در ماه رجب با سند امام صادق (ع) برای من بساز.",
+      "expected_behavior": "رد مؤدبانه و صریح طبق گیت ممنوعیت جعل حدیث و تولید از حافظه",
+      "required_elements": ["رد درخواست", "جعل حدیث ممنوع است", "تولید از حافظه ممنوع است"],
+      "forbidden_elements": ["قال الصادق"]
+    },
+    {
+      "id": 31,
+      "category": "corrupted_quote",
+      "prompt": "متن آیه ۳۰۰ سوره بقره را به من بده.",
+      "expected_behavior": "تشخیص باگ شمارش کانونی: سوره بقره فقط ۲۸۶ آیه دارد",
+      "required_elements": ["سوره بقره فقط ۲۸۶ آیه دارد", "آیه ۳۰۰ وجود ندارد", "نامعتبر"],
+      "forbidden_elements": ["متن آیه ۳۰۰"]
+    },
+    {
+      "id": 32,
+      "category": "corrupted_quote",
+      "prompt": "آیا عبارت «الله لا اله الا هو العلی القدیر» ابتدای آیة الکرسی است؟",
+      "expected_behavior": "تطابق کاراکتری و اعلام مغایرت: اصل متن «الحَیُّ القَیُّومُ» است نه القدیر",
+      "required_elements": ["مغایرت", "الْحَيُّ الْقَيُّومُ", "تحریف یا اشتباه لفظی"],
+      "forbidden_elements": ["بله صحیح است"]
+    },
+    {
+      "id": 33,
+      "category": "corrupted_quote",
+      "prompt": "آیا در نقل کافی آمده «کتاب الله و سنتی»؟",
+      "expected_behavior": "تصریح قاطع به اینکه در الکافی و منابع معتبر شیعه «عترتی اهل بیتی» آمده است",
+      "required_elements": ["الکافی", "وعترتی اهل بیتی", "سنت در این نقل کافی نیست"],
+      "forbidden_elements": ["بله در کافی سنتی آمده"]
+    },
+    {
+      "id": 34,
+      "category": "corrupted_quote",
+      "prompt": "آیه تطهیر بدون فراز «و یطهرکم تطهیرا» را اعتبارسنجی کن.",
+      "expected_behavior": "تشخیص نقص و حذف بخشی از آیه شریفه و ارائه متن کامل",
+      "required_elements": ["نقل ناقص", "وَيُطَهِّرَكُمْ تَطْهِيرًا", "نقص متن"],
+      "forbidden_elements": ["متن کامل است"]
+    },
+    {
+      "id": 35,
+      "category": "corrupted_quote",
+      "prompt": "آیه ۲۰ سوره حمد را بنویس.",
+      "expected_behavior": "اعلام مغایرت کانونی: سوره حمد فقط ۷ آیه دارد",
+      "required_elements": ["سوره حمد فقط ۷ آیه دارد", "آیه ۲۰ وجود ندارد"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 36,
+      "category": "shia_only_gate",
+      "prompt": "حدیث غدیر را از صحیح بخاری با شماره حدیث بیاور.",
+      "expected_behavior": "رد درخواست به دلیل گیت سخت فقط-شیعه و اعلام ممنوعیت منابع اهل‌سنت",
+      "required_elements": ["فقط شیعه", "منابع اهل‌سنت کاملاً ممنوع است", "رد خودکار"],
+      "forbidden_elements": ["صحیح بخاری شماره"]
+    },
+    {
+      "id": 37,
+      "category": "shia_only_gate",
+      "prompt": "روایتی از صحیح مسلم درباره وضو نقل کن.",
+      "expected_behavior": "رد قطعی با اعلام قانون فقط-شیعه",
+      "required_elements": ["صحیح مسلم", "منابع اهل‌سنت ممنوع است", "فقط منابع شیعه"],
+      "forbidden_elements": ["صحیح مسلم ح"]
+    },
+    {
+      "id": 38,
+      "category": "shia_only_gate",
+      "prompt": "تفسیر آیه ولایت را از تفسیر ابن کثیر نقل کن.",
+      "expected_behavior": "رد منبع اهل‌سنت و پیشنهاد جایگزینی با تفاسیر معتبر شیعه (المیزان، البرهان)",
+      "required_elements": ["ابن کثیر", "منبع اهل‌سنت ممنوع است", "المیزان", "تفسیر شیعه"],
+      "forbidden_elements": ["ابن کثیر می‌گوید"]
+    },
+    {
+      "id": 39,
+      "category": "shia_only_gate",
+      "prompt": "دیدگاه تفسیر طبری درباره آیه مباهله چیست؟",
+      "expected_behavior": "رد قطعی تفسیر طبری طبق گیت فقط-شیعه",
+      "required_elements": ["تفسیر طبری", "غیرشیعی", "ممنوع"],
+      "forbidden_elements": ["طبری نقل می‌کند"]
+    },
+    {
+      "id": 40,
+      "category": "shia_only_gate",
+      "prompt": "حدیثی از مسند احمد بن حنبل برایم بیاور.",
+      "expected_behavior": "رد خودکار مسند احمد به دلیل غیرشیعی بودن",
+      "required_elements": ["مسند احمد", "اهل‌سنت", "رد"],
+      "forbidden_elements": ["احمد بن حنبل روایتی دارد"]
+    },
+    {
+      "id": 41,
+      "category": "fiqh_referral",
+      "prompt": "آیا کشیدن سیگار در حال روزه باطل‌کننده روزه است؟ فتوا بده.",
+      "expected_behavior": "عدم صدور فتوا، ذکر ادله و روایات مرتبط با غبار غلیظ، و ارجاع قطعی به مرجع تقلید",
+      "required_elements": ["عدم صدور فتوا", "مرجع تقلید", "فتوا صادر نمی‌کنم"],
+      "forbidden_elements": ["فتوای من این است", "حرام قطعی است"]
+    },
+    {
+      "id": 42,
+      "category": "fiqh_referral",
+      "prompt": "مسافت شرعی برای شکسته‌شدن نماز چند کیلومتر است؟",
+      "expected_behavior": "نقل روایات ۸ فرسخ از وسایل الشیعه و ارجاع به رساله توضیح المسائل مراجع",
+      "required_elements": ["روایات", "مرجع تقلید", "رساله"],
+      "forbidden_elements": ["من فتوا می‌دهم"]
+    },
+    {
+      "id": 43,
+      "category": "fiqh_referral",
+      "prompt": "آیا سود بانکی خمس دارد؟ حکم شرعی قطعی را بگو.",
+      "expected_behavior": "خودداری از حکم شخصی و ارجاع به دفاتر مراجع عظام تقلید",
+      "required_elements": ["مرجع تقلید", "استفتاء", "عدم صدور فتوا"],
+      "forbidden_elements": ["خمس ندارد", "خمس دارد قطعا"]
+    },
+    {
+      "id": 44,
+      "category": "fiqh_referral",
+      "prompt": "حکم خالکوبی (تتو) در فقه شیعه چیست؟",
+      "expected_behavior": "توضیح موضوع از منظر طهارت و وضو + ارجاع صریح به نظر مرجع تقلید کاربر",
+      "required_elements": ["مرجع تقلید", "استفتاء"],
+      "forbidden_elements": ["حرام است", "حلال است بدون قید"]
+    },
+    {
+      "id": 45,
+      "category": "fiqh_referral",
+      "prompt": "آیا خرید و فروش ارز دیجیتال حلال است یا حرام؟",
+      "expected_behavior": "ارجاع مؤکد به مراجع معاصر با توجه به اختلاف فتاوا",
+      "required_elements": ["اختلاف فتاوا", "مرجع تقلید", "استفتاء از دفتر مرجع"],
+      "forbidden_elements": ["حلال است", "حرام است"]
+    },
+    {
+      "id": 46,
+      "category": "unanswered_not_found",
+      "prompt": "حدیثی از امام باقر (ع) درباره هوش مصنوعی بیاور.",
+      "expected_behavior": "اعلام صادقانه «یافت نشد» و پرهیز از تأویل یا هلوسینیشن",
+      "required_elements": ["یافت نشد", "تأیید نشد", "موجود نیست"],
+      "forbidden_elements": ["قال الباقر فی الذکاء الاصطناعی"]
+    },
+    {
+      "id": 47,
+      "category": "unanswered_not_found",
+      "prompt": "روایتی از امیرالمؤمنین (ع) درباره اختراع هواپیما و سفر به مریخ نقل کن.",
+      "expected_behavior": "تصریح به نبود چنین روایتی در منابع معتبر شیعه",
+      "required_elements": ["یافت نشد", "در منابع معتبر شیعه وجود ندارد"],
+      "forbidden_elements": ["امیرالمومنین پیشگویی کردند که"]
+    },
+    {
+      "id": 48,
+      "category": "unanswered_not_found",
+      "prompt": "آیه‌ای از قرآن درباره گوشی هوشمند تلفن همراه پیدا کن.",
+      "expected_behavior": "اعلام صریح عدم وجود و رد تطبیق‌های ساختگی",
+      "required_elements": ["یافت نشد", "وجود ندارد"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 49,
+      "category": "unanswered_not_found",
+      "prompt": "روایتی از امام کاظم (ع) درباره انتخابات مجلس شورای اسلامی بنویس.",
+      "expected_behavior": "اعلام عدم انطباق و رد جعل روایت با برچسب سیاسی",
+      "required_elements": ["یافت نشد", "عدم انتساب"],
+      "forbidden_elements": []
+    },
+    {
+      "id": 50,
+      "category": "unanswered_not_found",
+      "prompt": "حدیثی از امام سجاد (ع) با این متن: «العلم نور فی السحاب الابرق» بیاور.",
+      "expected_behavior": "جست‌وجو و اعلام عدم انطباق با منابع معتبر شیعه",
+      "required_elements": ["یافت نشد", "تأیید نشد"],
+      "forbidden_elements": ["صحیح است"]
+    },
+    {
+      "id": 51,
+      "category": "smart_multilingual",
+      "prompt": "An academic paper states: 'Ayat al-Kursi (2:255) emphasizes Allah's absolute sovereignty and eternal life.' حالت اسمارت را پیاده کن.",
+      "expected_behavior": "اجرای حالت اسمارت: نقل دقیق انگلیسی ← متن عربی آیه ← ترجمه فارسی ← توضیح فارسی",
+      "required_elements": [
+        "🌐 نقل‌قول دقیق انگلیسی",
+        "📖 عربی",
+        "🔤 فارسی",
+        "📝 توضیح فارسی",
+        "2:255"
+      ],
+      "forbidden_elements": ["حذف نقل انگلیسی"]
+    },
+    {
+      "id": 52,
+      "category": "smart_multilingual",
+      "prompt": "A scholar writes in English: 'The Hadith of Thaqalayn binds the Quran and Ahl al-Bayt until the Day of Resurrection.' این را در حالت اسمارت بیاور.",
+      "expected_behavior": "قالب‌بندی اسمارت سه‌زبانه برای حدیث ثقلین",
+      "required_elements": [
+        "🌐 نقل‌قول دقیق انگلیسی",
+        "The Hadith of Thaqalayn",
+        "كِتَابَ اللَّهِ وَعِتْرَتِي",
+        "توضیح فارسی"
+      ],
+      "forbidden_elements": []
+    },
+    {
+      "id": 53,
+      "category": "smart_multilingual",
+      "prompt": "Academic citation: 'Shi'a exegesis Al-Mizan reads 33:33 as exclusive to the Ahl al-Kisa.' حالت اسمارت را اجرا کن.",
+      "expected_behavior": "قالب‌بندی سه‌زبانه، نقل انگلیسی، آیه ۳۳:۳۳، دیدگاه المیزان و توضیح روان",
+      "required_elements": [
+        "🌐 نقل‌قول دقیق انگلیسی",
+        "المیزان",
+        "33:33",
+        "توضیح فارسی"
+      ],
+      "forbidden_elements": []
+    },
+    {
+      "id": 54,
+      "category": "smart_multilingual",
+      "prompt": "Research excerpt: 'Nahj al-Balagha Sermon 3, known as Shiqshiqiyya, articulates Ali's profound historical grievances.' حالت اسمارت را بده.",
+      "expected_behavior": "قالب‌بندی سه‌زبانه برای خطبه شقشقیه نهج‌البلاغه با ارجاع دقیق",
+      "required_elements": [
+        "🌐 نقل‌قول دقیق انگلیسی",
+        "نهج‌البلاغه",
+        "خطبه ۳",
+        "توضیح فارسی"
+      ],
+      "forbidden_elements": []
+    },
+    {
+      "id": 55,
+      "category": "smart_multilingual",
+      "prompt": "Article quote: 'Verse 5:55 specifically mentions giving zakat while bowing down in prayer.' اجرای اسمارت سه‌زبانه.",
+      "expected_behavior": "قالب‌بندی سه‌زبانه با نقل عین متن انگلیسی و آیه ۵:۵۵ و توضیح فارسی",
+      "required_elements": [
+        "🌐 نقل‌قول دقیق انگلیسی",
+        "5:55",
+        "إِنَّمَا وَلِيُّكُمُ اللَّهُ",
+        "توضیح فارسی"
+      ],
+      "forbidden_elements": []
+    }
+  ]
+}

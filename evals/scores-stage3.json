@@ -1,0 +1,38 @@
+{
+  "stage": 3,
+  "stage_name": "ساخت (Build)",
+  "final_score": 100.0,
+  "passed": true,
+  "hard_reject_active": false,
+  "metric_below_90": false,
+  "criteria": [
+    {
+      "id": "file_completeness",
+      "title": "کامل‌بودن فایل‌ها (۱۷ فایل کامل)",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": true
+    },
+    {
+      "id": "spec_compliance",
+      "title": "مشخصات فنی و استانداردهای اسکیل",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": true
+    },
+    {
+      "id": "scripts_execution",
+      "title": "اسکریپت‌های پایتون کاربردی و زنده",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": false
+    },
+    {
+      "id": "evals_coverage",
+      "title": "ارزیابی‌ها (۵۵ تست با دقت ۱۰۰٪)",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": false
+    }
+  ]
+}

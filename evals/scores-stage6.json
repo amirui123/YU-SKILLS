@@ -1,0 +1,38 @@
+{
+  "stage": 6,
+  "stage_name": "گزارش (Report)",
+  "final_score": 100.0,
+  "passed": true,
+  "hard_reject_active": false,
+  "metric_below_90": false,
+  "criteria": [
+    {
+      "id": "honest_weaknesses",
+      "title": "نقاط ضعف و محدودیت‌های صادقانه",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": false
+    },
+    {
+      "id": "sources_cited",
+      "title": "ذکر کامل منابع و مراجع",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": false
+    },
+    {
+      "id": "limitations_admitted",
+      "title": "پذیرش مرزهای فنی مدل",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": false
+    },
+    {
+      "id": "transparency",
+      "title": "شفافیت گزارش و لاگ‌های تست",
+      "weight": 25,
+      "score": 100,
+      "hard_reject": false
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+name: Skill Validate
+on: [push]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check structure
+        run: |
+          test -f skills/quran-hadith-verifier/SKILL.md
+          test -d skills/quran-hadith-verifier/references
+          test -d skills/quran-hadith-verifier/scripts
+          test -d skills/quran-hadith-verifier/evals
+      - name: Validate JSON
+        run: python -m json.tool skills/quran-hadith-verifier/evals/evals.json > /dev/null
